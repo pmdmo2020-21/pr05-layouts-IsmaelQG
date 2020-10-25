@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/flRoot"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblTitle"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/imgHeader"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"/>
+
+    <ImageView
+        android:id="@+id/imgBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgHeader"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/lblTitle"
+        android:layout_alignTop="@id/lblTitle"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:src="@drawable/ic_bookmark" />
+
+    <TextView
+        android:id="@+id/lblDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lblDateTime"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin_2x"
+        android:layout_below="@id/lblTitle"
+        />
+
+    <Button
+        android:id="@+id/btnRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRent"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_alignStart="@id/lblDateTime"
+        android:layout_toLeftOf="@+id/centerShim1"
+        android:layout_below="@id/lblDateTime"
+        />
+
+    <View
+        android:id="@+id/centerShim1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDateTime"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_toRightOf="@+id/centerShim1"
+        android:layout_alignEnd="@id/lblDateTime"
+        android:text="@string/btnBuy" />
+
+    <View
+        android:id="@+id/firstBar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"
+        android:layout_margin="@dimen/margin_2x"
+        android:layout_below="@id/btnRent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/firstCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_below="@id/firstBar"
+        android:layout_alignLeft="@id/btnRent"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/lblRatings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblRatings"
+        android:layout_below="@id/firstCircle"
+        android:layout_alignLeft="@id/firstCircle"
+        android:layout_alignRight="@id/firstCircle"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/secondCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_family"
+        android:layout_below="@id/firstBar"
+        android:layout_alignRight="@id/btnRent"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/lblFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblFamily"
+        android:layout_below="@id/secondCircle"
+        android:layout_alignLeft="@id/secondCircle"
+        android:layout_alignRight="@id/secondCircle"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/thirdCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tomato"
+        android:layout_below="@id/firstBar"
+        android:layout_alignLeft="@id/btnBuy"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/lblRottenTomatoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblRottenTomatoes"
+        android:layout_below="@id/thirdCircle"
+        android:layout_alignLeft="@id/thirdCircle"
+        android:layout_alignRight="@id/thirdCircle"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fourthCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_similar"
+        android:layout_below="@id/firstBar"
+        android:layout_alignRight="@id/btnBuy"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/lblSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblSimilar"
+        android:layout_below="@id/fourthCircle"
+        android:layout_alignLeft="@id/fourthCircle"
+        android:layout_alignRight="@id/fourthCircle"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin"/>
+
+    <View
+        android:id="@+id/secondBar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_below="@id/lblRatings"/>
+
+    <TextView
+        android:id="@+id/lblDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_2x"
+        android:text="@string/lblDescription"
+        android:layout_below="@id/secondBar"
+        android:textSize="20dp"/>
+
+
+</RelativeLayout>
